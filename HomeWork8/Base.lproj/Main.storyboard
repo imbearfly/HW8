@@ -1,26 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LbS-a8-7mp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="mgN-uZ-qo3">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LbS-a8-7mp" customClass="ViewController" customModule="HomeWork8" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="rci-ga-JNv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Myq-0r-n9n"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="fww-SD-wUm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokemon Master Ball iPhone 6+ HD Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="C9W-uC-aRJ"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJs-6b-Ylw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="hLb-cv-bb7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LbS-a8-7mp" id="Ckh-Qr-SGA"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYz-8g-lEi">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個字！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0b-wy-ChI">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="還剩下" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdq-Og-3tN">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="F0b-wy-ChI" firstAttribute="centerY" secondItem="ZYz-8g-lEi" secondAttribute="centerY" id="4A1-e2-0bg"/>
+                            <constraint firstItem="C9W-uC-aRJ" firstAttribute="centerX" secondItem="fww-SD-wUm" secondAttribute="centerX" id="5iC-bD-7pk"/>
+                            <constraint firstItem="ZYz-8g-lEi" firstAttribute="leading" secondItem="tdq-Og-3tN" secondAttribute="trailing" constant="15" id="KT5-NQ-B4w"/>
+                            <constraint firstItem="ZYz-8g-lEi" firstAttribute="centerX" secondItem="fww-SD-wUm" secondAttribute="centerX" id="LcB-f7-yId"/>
+                            <constraint firstItem="FJs-6b-Ylw" firstAttribute="centerY" secondItem="fww-SD-wUm" secondAttribute="centerY" constant="-50" id="OUX-2D-xnD"/>
+                            <constraint firstItem="C9W-uC-aRJ" firstAttribute="top" secondItem="fww-SD-wUm" secondAttribute="top" id="OWQ-e1-xWF"/>
+                            <constraint firstItem="C9W-uC-aRJ" firstAttribute="leading" secondItem="fww-SD-wUm" secondAttribute="leading" id="RMO-ED-dpP"/>
+                            <constraint firstItem="C9W-uC-aRJ" firstAttribute="centerY" secondItem="fww-SD-wUm" secondAttribute="centerY" id="Z6F-h7-7lb"/>
+                            <constraint firstAttribute="trailing" secondItem="C9W-uC-aRJ" secondAttribute="trailing" id="cOD-FD-6fA"/>
+                            <constraint firstItem="Myq-0r-n9n" firstAttribute="top" secondItem="C9W-uC-aRJ" secondAttribute="bottom" id="fcL-1O-E4Z"/>
+                            <constraint firstItem="FJs-6b-Ylw" firstAttribute="top" secondItem="ZYz-8g-lEi" secondAttribute="bottom" constant="16" id="fyg-FN-I31"/>
+                            <constraint firstItem="F0b-wy-ChI" firstAttribute="leading" secondItem="ZYz-8g-lEi" secondAttribute="trailing" constant="15" id="sV2-K2-Fow"/>
+                            <constraint firstItem="tdq-Og-3tN" firstAttribute="centerY" secondItem="ZYz-8g-lEi" secondAttribute="centerY" id="voR-9P-Lab"/>
+                            <constraint firstItem="FJs-6b-Ylw" firstAttribute="centerX" secondItem="fww-SD-wUm" secondAttribute="centerX" id="wQ1-M7-1BC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countDownLabel" destination="ZYz-8g-lEi" id="xQu-ID-dvd"/>
+                        <outlet property="insertTxt" destination="FJs-6b-Ylw" id="aei-5W-ZB5"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Z1-hk-JSO" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pokemon Master Ball iPhone 6+ HD Wallpaper" width="1080" height="1920"/>
+    </resources>
 </document>
