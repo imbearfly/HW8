@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var insertTxt: UITextField!
+    @IBOutlet weak var insertTxtView: UITextView!
+    @IBOutlet weak var countDownLabelTV: UILabel!
     
     let limitCHTs = 10
     //    var counter = 0
@@ -30,14 +32,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //                return true
         //        }
         
-        let oldLength = textField.text?.characters.count
-        let insertLength = string.characters.count
-        let newLength = oldLength! + insertLength - range.length
-        let isWithinLimit = newLength <= limitCHTs
+        let oldLength = textField.text?.characters.count //get text length brfore intert
+        let insertLength = string.characters.count // get inserting text lenght
+        let newLength = oldLength! + insertLength - range.length //calculate text length after insert
+        let isWithinLimit = newLength <= limitCHTs //to see is the final lenght exceed the limit
         if isWithinLimit {
-            countDownLabel.text = String(limitCHTs - newLength)
+            countDownLabel.text = String(limitCHTs - newLength) //change the label's text
+
         }
         return isWithinLimit
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let oldLength = textView.text.characters.count
+        let insertLength = text.characters.count
+        let newLength = oldLength + insertLength - range.length
+        let isWhthinLimit = newLength <= limitCHTs
+        if isWhthinLimit {
+            countDownLabelTV.text = String(limitCHTs - newLength)
+        }
+        return isWhthinLimit
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -52,6 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.insertTxt.delegate = self
         countDownLabel.text = String(limitCHTs)
+        countDownLabelTV.text = String(limitCHTs)
     }
     
     override func didReceiveMemoryWarning() {
